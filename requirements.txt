@@ -1,0 +1,11 @@
+pandas
+numpy 
+os
+datetime
+warnings
+openpyxl
+pathlib
+python-dotenv
+sqlalchemy
+psycopg2-binary
+urllib
