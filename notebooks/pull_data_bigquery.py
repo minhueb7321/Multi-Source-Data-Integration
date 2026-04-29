@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r'F:\Documents\BigqueryJson\mydicosilver-b09ac9cd28e3.json'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r''
 
 client = bigquery.Client()
 
