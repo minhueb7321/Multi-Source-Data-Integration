@@ -53,12 +53,12 @@ def load_tong_hop(base_path, year):
         return pd.DataFrame()
     
 
-def concatenate_file_end_xlsx(path):
+def concatenate_file_end_xlsx(path , usecols):
     dfs = []
     for file in os.listdir(path):
         if file.endswith('.xlsx') and not file.startswith('~$'):
    
-            df = pd.read_excel(os.path.join(path, file) , usecols= ["serial",	"product_name"	,"bundle_type_name"	,"total_stamp"	,"batch_number",	"expire_time",	"produce_time"], engine='openpyxl')
+            df = pd.read_excel(os.path.join(path, file) , usecols= usecols, engine='openpyxl')
             df['department'] = file
         dfs.append(df)
     return pd.concat(dfs, ignore_index=True)
