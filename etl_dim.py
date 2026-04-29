@@ -107,7 +107,7 @@ def task_process_misa(base_dir, engine):
     load_to_postgres_optimized(df_all_employees_to_postgres, table_name='misa_employees', schema_name='stg')
 
     # Nhân viên Quyền có 2 mã nối vào df chính sẽ bị dup doanh số nên xóa bỏ mã bên VH
-    df_all_employees = df_all_employees[df_all_employees['Mã nhân viên'] != 'HN_VH_NGUYENQUANGQUYEN1']
+    df_all_employees = df_all_employees[df_all_employees['Mã nhân viên'] != '']
     file_name_individual_employees = "all_employees_misa.xlsx"
     output_path_employees = os.path.join(OUTPUT_EMPLOYEE_FOLDER, file_name_individual_employees)
     df_all_employees.to_excel(output_path_employees, index=False)
