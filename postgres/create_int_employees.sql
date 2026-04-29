@@ -125,7 +125,7 @@ with source_platforms as (
  	-- lấy mã nhân viên duy nhất
  	a.ma_nhan_vien ,
 
- 	-- set up lại tên nhân viên cho các cháu Hà Nội, dùng cho dashboard 
+ 	-- set up lại tên nhân viên cho các nv Hà Nội, dùng cho dashboard 
  	replace(regexp_replace(initcap(COALESCE(dms.ten_nhan_vien,m.ten_nhan_vien, duc.ten_nhan_vien )), ' TN$| Bb$|\.$|-T$| \.$','', 'g') , ' Tn', '') as "ten_nhan_vien",
 
  	-- dùng cho search file từ misa
